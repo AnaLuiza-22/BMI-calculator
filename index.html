@@ -26,9 +26,9 @@
 
     <script>
         function calculateBMI() {
-            const sex = document.getElementById("sex").value
-            const height = document.getElementById("height").value
-            const weight = document.getElementById("weight").value
+            const sex = parseFloat(document.getElementById("sex").value)
+            const height = parseFloat(document.getElementById("height").value)
+            const weight = parseFloat(document.getElementById("weight").value)
             console.log(sex, weight, height)
         }
 
