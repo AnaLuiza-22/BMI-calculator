@@ -32,7 +32,8 @@
             console.log(sex, weight, height)
 
             if (sex === "" || weight <= 0 || height <=0) {
-                document.getElementById("result").innerHTML = "Invalid inputs"
+                document.getElementById("result").innerHTML = "Invalid inputs, please fill all fields correctly"
+                return 
             }
         }
 
