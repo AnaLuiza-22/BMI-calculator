@@ -30,6 +30,10 @@
             const height = parseFloat(document.getElementById("height").value)
             const weight = parseFloat(document.getElementById("weight").value)
             console.log(sex, weight, height)
+
+            if (sex === "" || weight <= 0 || height <=0) {
+                console.log ("Invalid inputs")
+            }
         }
 
     </script>
