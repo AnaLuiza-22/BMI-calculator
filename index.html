@@ -42,14 +42,37 @@
             console.log(bmiRounded)
             document.getElementById("result").innerHTML = bmiRounded
 
+            let category
+            let advice
+
             if (bmi < 18.5){
-                category = "Underweight"
+                category = "Underweight";
+                if (sex === "female"){
+                    advice = "This may indicate you are not consuming enough nutrients and may have lower body fat and muscle reserves than optimal. Consider speaking to a GP.";
+                } else {
+                    advice = "You may benefit from increasing your caloric intake and building muscle mass";
+                }
             } else if (bmi >= 18.5 && bmi < 25){
-                category = "Healthy Weight"
+                category = "Healthy Weight";
+                if (sex === "female"){
+                    advice = "You\'re within a healthy range. Women in this range typically have a healthy body fat percentage.";
+                } else {
+                    advice = "You\re within a healthy range. Maintaining this with regular exercise is ideal.";
+                }
             } else if (bmi >= 25 && bmi < 30) {
-                category = "Overweight"
+                category = "Overweight";
+                if (sex === "female"){
+                    advice = "BMI is a limited measure for women. Consider also tracking waist-to-hip ratio for a fuller picture.";
+                } else{
+                    advice = "Men in this range often carry excess visceral fat. Cardio and strength training can help.";
+                }
             } else {
                 category = "Obese"
+                if (sex === "female"){
+                    advice = "It may be worth speaking to a healthcare professional about diet, activity, and overall health.";
+                } else {
+                    advice = "It may be worth speaking to a healthcare professional about diet, activity, and overall health.";
+                }
             }
         }
 
