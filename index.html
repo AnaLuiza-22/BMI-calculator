@@ -25,6 +25,7 @@
     <div id="result"></div>
 
     <script>
+
         function calculateBMI() {
             const sex = document.getElementById("sex").value
             const height = parseFloat(document.getElementById("height").value)
@@ -40,7 +41,6 @@
             const bmi = weight / (heightInMeters ** 2)
             const bmiRounded = bmi.toFixed(2)
             console.log(bmiRounded)
-            document.getElementById("result").innerHTML = bmiRounded
 
             let category
             let advice
@@ -57,7 +57,7 @@
                 if (sex === "female"){
                     advice = "You\'re within a healthy range. Women in this range typically have a healthy body fat percentage.";
                 } else {
-                    advice = "You\re within a healthy range. Maintaining this with regular exercise is ideal.";
+                    advice = "You\'re within a healthy range. Maintaining this with regular exercise is ideal.";
                 }
             } else if (bmi >= 25 && bmi < 30) {
                 category = "Overweight";
@@ -74,6 +74,7 @@
                     advice = "It may be worth speaking to a healthcare professional about diet, activity, and overall health.";
                 }
             }
+            document.getElementById("result").innerHTML = `Your BMI is ${bmiRounded} <br> Category: ${category} <br> Advice: ${advice}`
         }
 
     </script>
