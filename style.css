@@ -51,3 +51,7 @@ label {
     display: block;
     margin-bottom: 5px;
 }
+
+#result {
+    margin-top: 20px;
+}
