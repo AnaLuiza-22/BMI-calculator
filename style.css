@@ -20,3 +20,9 @@ h1 {
     color: #003580;
     font-family: sans-serif;
 }
+
+input, select, button {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+}
