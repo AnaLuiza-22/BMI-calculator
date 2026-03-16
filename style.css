@@ -35,3 +35,10 @@ button {
     border-radius: 25px;
     cursor: pointer;
 }
+
+input, select {
+    border: 1px solid lightgrey;
+    padding: 13px;
+    border-radius: 25px;
+    font-size: 16px;
+}
